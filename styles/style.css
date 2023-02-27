@@ -9,14 +9,17 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: #EDECED;
+    color: gray;
 }
 
 /* configurações genéricas*/
 
-.container-grid {
-    width: 80%;
+.grid-layout {
+    width: 80%; 
+    max-width: 1200px; /* limite máximo de largura */
+    min-width: 992px; /*limite mínimo de largura*/
     margin: 0 auto;
-    background-color: gray;
 }
 /* CABEÇALHO */
 header {
@@ -55,16 +58,31 @@ text-decoration: none;
 /* MAIN */
 
 main .colunas-flex {
+    margin-top: 20px;
 display: flex;
 justify-content: space-between;
-margin-top: 30px;
-margin-right: 10%;
-margin-left: 10%;
 }
 
+/* section com class coluna1 */
 main .coluna1 {
     width: 75%;
-    /* background-color: green; */
+    background-color: white;
+}
+
+main .coluna1 h2 {
+margin-top: 20px;
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+main .coluna1 p {
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 20px;
+
+line-height: 20px;
+
 }
 
 main .coluna1 #lapis {
@@ -72,7 +90,37 @@ main .coluna1 #lapis {
 
 }
 
+/* aside com class coluna2 */
 main .coluna2 {
     width: 20%;
-    /* background-color: green; */
 }
+
+ main .coluna2 article {
+     background-color: white;
+ }
+
+ /* FOOTER */
+
+ footer {
+     padding-top: 20px;
+     padding-right: 0;
+     padding-bottom: 20px;
+     padding-left: 0;
+
+     padding: 0; /* top right bottom left*/
+     padding: 0 20px; /* top/bottom right/left */
+     padding: 0 20px 40; /* top right/left bottom */
+     padding: 10px 10px 10px 10px; /* top right bottom left*/
+
+     padding: 20px;
+
+     color: white;
+     background-color: #676767;
+
+ }
+
+ aside {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
